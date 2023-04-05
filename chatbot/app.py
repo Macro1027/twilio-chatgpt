@@ -1,6 +1,6 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
-from twilio_chatgpt import chatbot_response, send_message
+from chatbot.twilio_chatgpt import chatbot_response, send_message
 app = Flask(__name__)
 
 @app.route('/')
