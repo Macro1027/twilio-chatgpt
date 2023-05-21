@@ -17,6 +17,7 @@ def receiveMessage():
         result = chatbot_response(message)
         if result['status'] == 1:
             print(result)
+            print(sender_id)
             send_message(sender_id, result['response']['content'])
         else:
             print('chatgpt error')
@@ -24,5 +25,3 @@ def receiveMessage():
         pass
     return 'OK', 200
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
